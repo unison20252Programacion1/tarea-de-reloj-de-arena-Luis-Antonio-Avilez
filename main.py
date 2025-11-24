@@ -1,7 +1,7 @@
 # Completa las validaciones y llama a la función
 
 import sys
-from solucion import triangulo_simetrico
+from solucion import reloj_arena
 
 def main():
     """
