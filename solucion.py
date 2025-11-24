@@ -7,15 +7,21 @@ def reloj_arena(m: int, s: str) -> str:
         return
     # TODO: implementar la lógica para generar el reloj de arena en ASCII
     lineas = []
+
+    # Parte superior
     for i in range(m):
         espacios = " " * i
         ancho = 2 * (m - i) - 1
         lineas.append(espacios + s * ancho)
-        
-    for i in range(m-2, -1, -1):
+
+    # Parte inferior
+    for i in range(m - 2, -1, -1):
         espacios = " " * i
         ancho = 2 * (m - i) - 1
         lineas.append(espacios + s * ancho)
+
+    return "\n".join(lineas)
+
         
 
 
