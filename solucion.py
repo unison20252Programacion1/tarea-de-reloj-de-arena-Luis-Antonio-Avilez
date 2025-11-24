@@ -17,5 +17,5 @@ def reloj_arena(m: int, s: str) -> str:
         ancho = 2 * (m - i) - 1
         lineas.append(espacios + s * ancho)
         
-    return "\n".join(lineas)
+
 
