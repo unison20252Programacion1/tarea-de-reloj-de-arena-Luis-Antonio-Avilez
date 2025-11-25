@@ -1,7 +1,7 @@
 # Completa las validaciones y llama a la función
 
 import sys
-from solucion import [NOMBRE_DE_LA_FUNCION]
+from solucion import reloj_arena
 
 def main():
     """
@@ -9,31 +9,42 @@ def main():
           donde cada elemento de la lista es un string    
     """
 
-    # IF que permite leer desde la entrada estándar o pedir datos al usuario
+    # Vamos a construir la lista de strings data en base a lectura desde stdin 
+    # o en base a lectura interactiva usando input()
     if sys.stdin.isatty():
+        # cuando el comando se ejecuta en forma interactiva
         data = []
         data.append(input("Ingresa la altura: ").strip())
         data.append(input("Ingresa el caracter: "))
     else:
+        # cuando se usa redireccion de entrada (por ejemplo "python main.py < datos.txt")
         data = sys.stdin.read().strip().splitlines()
 
-    # Validar que se recibieron dos líneas
+    # TODO: validar que data tenga 2 líneas
     if len(data) < 2:
         print("Error: Se esperan 2 lineas de entrada (altura, caracter)")
         return
+        
+    m_str = data[0].strip()
+    s = data[1]
 
-    m_str = data[0].strip() # Primera línea: altura máxima (como texto)
-    s = data[1]             # Segunda línea: carácter (o cadena) para la figura
+    # TODO: validar que s no sea vacío usando print("Error: El caracter no puede ser vacío")
+    if s == "":
+        print("Error: El caracter no puede ser vacío")
+        return
 
-    # Intentar convertir la altura a entero
+    # TODO: intentar convertir m_str a entero y en caso de fallo imprimir and salir. 
     try:
-        # TODO: Convertir m_str a entero y asignarlo a m
-        pass
+        m = int(m_str)
     except ValueError:
-        # TODO: imprimir "Error: La altura debe ser un numero entero" y salir
-        pass
+        print("Error: La altura debe ser un numero entero")
+        return
 
-    # TODO: llamar a la función triangulo_simetrico con los parámetros m y s
+    # Llama a la función reloj_arena y muestra el resultado
+    res = reloj_arena(m, s)
+
+    if res is not None:
+        print(res)
 
 if __name__ == "__main__":
     main()
