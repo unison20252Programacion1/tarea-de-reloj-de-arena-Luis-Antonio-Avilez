@@ -6,17 +6,17 @@ def reloj_arena(m: int, s: str) -> str:
         print("Error: La altura debe ser un entero positivo")
         return
     # TODO: implementar la lógica para generar el reloj de arena en ASCII
+    c = s[0]
      # Parte superior (triángulo invertido)
     for i in range(m):
-        espacios = " " * i
-        ancho = 2*(m - i) - 1
-        print(espacios + s * ancho)
-
+        espacios = i
+        chars = 2 * (m - i) - 1
+        print(" " * espacios + c * chars)
     # Parte inferior (triángulo normal)
-    for i in range(m - 2, -1, -1):
-        espacios = " " * i
-        ancho = 2*(m - i) - 1
-        print(espacios + s * ancho)
+   for i in range(1, m):
+        espacios = m - i - 1
+        chars = 2 * i + 1
+        print(" " * espacios + c * chars)
 
 
 
