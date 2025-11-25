@@ -41,6 +41,7 @@ def main():
 
     # Llama a la función reloj_arena y muestra el resultado
     reloj_arena(m, s)
+    print(reloj_arena)
 
 if __name__ == "__main__":
     main()
