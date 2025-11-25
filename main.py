@@ -21,6 +21,10 @@ def main():
         data = sys.stdin.read().strip().splitlines()
 
     # TODO: validar que data tenga 2 líneas
+    if len(data) < 2:
+        print("Error: Se esperan 2 lineas de entrada (altura, caracter)")
+        return
+        
     m_str = data[0].strip()
     s = data[1]
 
