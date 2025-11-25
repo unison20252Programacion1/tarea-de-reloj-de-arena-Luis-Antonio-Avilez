@@ -21,7 +21,7 @@ def main():
         data = sys.stdin.read().strip().splitlines()
 
     # TODO: validar que data tenga 2 líneas
-    m_str = data[0]
+    m_str = data[0].strip()
     s = data[1]
 
     # TODO: validar que s no sea vacío usando print("Error: El caracter no puede ser vacío")
