@@ -40,8 +40,8 @@ def main():
         return
 
     # Llama a la función reloj_arena y muestra el resultado
-    reloj_arena(m, s)
-    print(reloj_arena)
+    res = reloj_arena(m, s)
+    print(res)
 
 if __name__ == "__main__":
     main()
