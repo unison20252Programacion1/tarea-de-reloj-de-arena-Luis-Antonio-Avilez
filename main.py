@@ -32,6 +32,7 @@ def main():
     if s == "":
         print("Error: El caracter no puede ser vacío")
         return
+
     # TODO: intentar convertir m_str a entero y en caso de fallo imprimir and salir. 
     try:
         m = int(m_str)
@@ -41,7 +42,9 @@ def main():
 
     # Llama a la función reloj_arena y muestra el resultado
     res = reloj_arena(m, s)
-    print(res)
+
+    if res is not None:
+        print(res)
 
 if __name__ == "__main__":
     main()
